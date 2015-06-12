@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./lib ./example && babel -sd lib/ src/ && webpack",
-    "prepublish": "npm run build",
     "start": "webpack-dev-server",
     "lint": "eslint ./src ./*.js",
     "test": "npm run lint"
