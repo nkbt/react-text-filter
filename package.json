@@ -1,0 +1,47 @@
+{
+  "name": "react-text-filter",
+  "version": "1.0.0",
+  "description": "React component that renders filtering Input",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./lib ./example && babel -sd lib/ src/ && webpack",
+    "prepublish": "npm run build",
+    "start": "webpack-dev-server",
+    "lint": "eslint ./src ./*.js",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkbt/react-text-filter.git"
+  },
+  "keywords": [
+    "component",
+    "react-component",
+    "react",
+    "react-text-filter",
+    "filter",
+    "text-filter"
+  ],
+  "author": "Nik Butenko <nik@butenko.me> (http://butenko.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkbt/react-text-filter/issues"
+  },
+  "homepage": "https://github.com/nkbt/react-text-filter",
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.5.6",
+    "babel-loader": "^5.1.4",
+    "eslint": "^0.22.1",
+    "eslint-loader": "^0.12.0",
+    "eslint-plugin-react": "^2.5.0",
+    "html-webpack-plugin": "^1.5.0",
+    "node-libs-browser": "^0.5.2",
+    "react-hot-loader": "^1.2.7",
+    "webpack": "^1.9.10",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
