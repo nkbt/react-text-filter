@@ -30,11 +30,18 @@ Minimal length of text to start notify
 Notification debounce timeout in ms
 
 
+## Installation
+
+```bash
+npm install --save react-text-filter
+```
+
+
 ## Usage
 ```js
 import React from 'react';
 const {PropTypes} = React;
-import TextFilter from './ReactTextFilter.js';
+import TextFilter from 'react-text-filter';
 
 
 const Item = React.createClass({
@@ -73,22 +80,15 @@ const fruits = [
   'green apple'
 ];
 
+
 const fruitFilter = filter => fruit => fruit.toLowerCase().indexOf(filter.toLowerCase()) !== -1;
+
 
 const App = React.createClass({
   getInitialState() {
     return {filter: ''};
   },
 
-
-  onFilter(filter) {
-    this.setState({filter});
-  },
-
-
-  fruitFilter(filter) {
-    return rule => rule.name.toLowerCase().indexOf(filter.toLowerCase()) !== -1;
-  },
 
   render() {
     const filteredFruits = this.state.filter ?
@@ -97,7 +97,7 @@ const App = React.createClass({
 
     return (
       <div>
-        <TextFilter onFilter={this.onFilter} />
+        <TextFilter onFilter={filter => this.setState({filter})} />
         <List items={filteredFruits} />
       </div>
     );
