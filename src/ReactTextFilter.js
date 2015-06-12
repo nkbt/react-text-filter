@@ -33,7 +33,30 @@ const ReactTextFilter = React.createClass({
   },
 
 
-  componentWillUpdate({minLength}, {filter}) {
+  componentWillUpdate({minLength, debounceTimeout}, {filter}) {
+    this.maybeUpdateNotifier(debounceTimeout);
+    this.maybeNotify(minLength, filter);
+  },
+
+
+  componentWillMount() {
+    this.createNotifier(this.props.debounceTimeout);
+  },
+
+
+  createNotifier(debounceTimeout) {
+    this.notify = debounce(this.props.onFilter, debounceTimeout);
+  },
+
+
+  maybeUpdateNotifier(debounceTimeout) {
+    if (debounceTimeout !== this.props.debounceTimeout) {
+      this.createNotifier(debounceTimeout);
+    }
+  },
+
+
+  maybeNotify(minLength, filter) {
     const {filter: oldFilter} = this.state;
 
     if (filter === oldFilter) {
@@ -49,11 +72,6 @@ const ReactTextFilter = React.createClass({
     if (filter.length < oldFilter.length) {
       this.notify('');
     }
-  },
-
-
-  componentWillMount() {
-    this.notify = debounce(this.props.onFilter, this.props.debounceTimeout);
   },
 
 
