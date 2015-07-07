@@ -1,11 +1,10 @@
 import React from 'react';
-const {PropTypes} = React;
-import TextFilter from './ReactTextFilter.js';
+import TextFilter from '..';
 
 
 const Item = React.createClass({
   propTypes: {
-    item: PropTypes.string.isRequired
+    item: React.PropTypes.string.isRequired
   },
 
 
@@ -17,7 +16,7 @@ const Item = React.createClass({
 
 const List = React.createClass({
   propTypes: {
-    items: PropTypes.arrayOf(PropTypes.string).isRequired
+    items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
 

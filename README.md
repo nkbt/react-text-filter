@@ -2,7 +2,8 @@
 
 React component that renders filtering Input
 
-
+[![Circle CI](https://circleci.com/gh/nkbt/react-text-filter.svg?style=svg)](https://circleci.com/gh/nkbt/react-text-filter)
+[![Coverage Status](https://coveralls.io/repos/github/nkbt/react-text-filter/badge.svg?branch=master)](https://coveralls.io/github/nkbt/react-text-filter?branch=master)
 [![Dependency Status](https://david-dm.org/nkbt/react-text-filter.svg)](https://david-dm.org/nkbt/react-text-filter)
 [![devDependency Status](https://david-dm.org/nkbt/react-text-filter/dev-status.svg)](https://david-dm.org/nkbt/react-text-filter#info=devDependencies)
 
