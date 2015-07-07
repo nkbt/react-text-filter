@@ -1,14 +1,14 @@
 import React from 'react/addons';
 import debounce from 'lodash/function/debounce';
-const {PropTypes, addons: {PureRenderMixin}} = React;
+const {addons: {PureRenderMixin}} = React;
 
 
 const ReactTextFilter = React.createClass({
   propTypes: {
-    onFilter: PropTypes.func.isRequired,
-    filter: PropTypes.string,
-    minLength: PropTypes.number,
-    debounceTimeout: PropTypes.number
+    onFilter: React.PropTypes.func.isRequired,
+    filter: React.PropTypes.string,
+    minLength: React.PropTypes.number,
+    debounceTimeout: React.PropTypes.number
   },
 
 
