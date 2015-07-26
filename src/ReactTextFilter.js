@@ -1,6 +1,6 @@
-import React from 'react/addons';
+import React from 'react';
 import debounce from 'lodash.debounce';
-const {addons: {PureRenderMixin}} = React;
+import {shouldComponentUpdate} from 'react/lib/ReactComponentWithPureRenderMixin';
 
 
 const ReactTextFilter = React.createClass({
@@ -29,7 +29,7 @@ const ReactTextFilter = React.createClass({
 
 
   shouldComponentUpdate(...args) {
-    return PureRenderMixin.shouldComponentUpdate.call(this, ...args);
+    return shouldComponentUpdate.call(this, ...args);
   },
 
 
