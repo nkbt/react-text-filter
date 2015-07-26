@@ -9,7 +9,7 @@ describe('ReactTextFilter', () => {
 
 
   beforeEach(() => ReactTextFilter = ReactTextFilterInjector({
-    'lodash/function/debounce': debounce
+    'lodash.debounce': debounce
   }));
 
 

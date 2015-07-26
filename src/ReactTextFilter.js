@@ -1,5 +1,5 @@
 import React from 'react/addons';
-import debounce from 'lodash/function/debounce';
+import debounce from 'lodash.debounce';
 const {addons: {PureRenderMixin}} = React;
 
 
