@@ -2,6 +2,10 @@ machine:
   node:
     version: v0.10.38
 
+dependencies:
+  override:
+    - npm update -g npm
+
 test:
   override:
     - $(npm bin)/eslint . --format tap | $(npm bin)/tap-xunit > $CIRCLE_TEST_REPORTS/lint.xml
