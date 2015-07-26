@@ -3,7 +3,7 @@ machine:
     version: v0.10.38
 
 dependencies:
-  override:
+  pre:
     - npm update -g npm
 
 test:
