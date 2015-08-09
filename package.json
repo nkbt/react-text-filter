@@ -1,6 +1,6 @@
 {
   "name": "react-text-filter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React component that renders filtering Input",
   "main": "lib/index.js",
   "scripts": {
