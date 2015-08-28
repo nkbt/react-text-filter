@@ -9,34 +9,27 @@
 
 React component that renders filtering Input
 
-## Options
 
+![Text Filter](https://cdn.rawgit.com/nkbt/react-text-filter/master/src/example/react-text-filter.gif)
 
-#### `onFilter`: PropTypes.func.isRequired
-
-Function called when filter is changed (debounced)
-
-
-#### `filter`: PropTypes.string (default: '')
-
-Initial filter value
-
-
-#### `minLength`: PropTypes.number (default: 2)
-
-Minimal length of text to start notify
-
-
-#### `debounceTimeout`: PropTypes.number (default: 100)
-
-Notification debounce timeout in ms
 
 
 ## Installation
 
-```bash
+### npm
+
+```sh
 npm install --save react-text-filter
 ```
+
+### bower
+
+Coming soon
+
+
+## Demo
+
+[http://nkbt.github.io/react-text-filter/example](http://nkbt.github.io/react-text-filter/example)
 
 
 ## Usage
@@ -111,6 +104,29 @@ React.render(<App />, document.body);
 ```
 
 
+## Options
+
+
+#### `onFilter`: PropTypes.func.isRequired
+
+Function called when filter is changed (debounced)
+
+
+#### `filter`: PropTypes.string (default: '')
+
+Initial filter value
+
+
+#### `minLength`: PropTypes.number (default: 2)
+
+Minimal length of text to start notify
+
+
+#### `debounceTimeout`: PropTypes.number (default: 100)
+
+Notification debounce timeout in ms
+
+
 ## Development and testing
 
 ```bash
@@ -123,11 +139,6 @@ Then
 ```bash
 open http://localhost:8080
 ```
-
-## Demo
-
-[http://nkbt.github.io/react-text-filter/example](http://nkbt.github.io/react-text-filter/example)
-
 
 ## License
 
