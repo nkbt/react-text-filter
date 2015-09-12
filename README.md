@@ -1,6 +1,6 @@
 # react-text-filter
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nkbt/help)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
 
 [![Circle CI](https://circleci.com/gh/nkbt/react-text-filter.svg?style=svg)](https://circleci.com/gh/nkbt/react-text-filter)
 [![Coverage Status](https://coveralls.io/repos/github/nkbt/react-text-filter/badge.svg?branch=master)](https://coveralls.io/github/nkbt/react-text-filter?branch=master)
