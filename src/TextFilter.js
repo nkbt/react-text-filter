@@ -1,9 +1,9 @@
 import React from 'react';
-import debounce from 'lodash.debounce';
+import DebounceInput from 'react-debounce-input';
 import {shouldComponentUpdate} from 'react/lib/ReactComponentWithPureRenderMixin';
 
 
-const ReactTextFilter = React.createClass({
+const TextFilter = React.createClass({
   propTypes: {
     onFilter: React.PropTypes.func.isRequired,
     filter: React.PropTypes.string,
@@ -22,73 +22,42 @@ const ReactTextFilter = React.createClass({
 
 
   getInitialState() {
-    return {
-      filter: this.props.filter
-    };
+    return {filter: this.props.filter};
   },
 
 
-  shouldComponentUpdate(...args) {
-    return shouldComponentUpdate.call(this, ...args);
-  },
-
-
-  componentWillUpdate({minLength, debounceTimeout}, {filter}) {
-    this.maybeUpdateNotifier(debounceTimeout);
-    this.maybeNotify(minLength, filter);
-  },
-
-
-  componentWillMount() {
-    this.createNotifier(this.props.debounceTimeout);
-  },
-
-
-  createNotifier(debounceTimeout) {
-    this.notify = debounce(this.props.onFilter, debounceTimeout);
-  },
-
-
-  maybeUpdateNotifier(debounceTimeout) {
-    if (debounceTimeout !== this.props.debounceTimeout) {
-      this.createNotifier(debounceTimeout);
+  componentWillReceiveProps({filter}) {
+    if (this.props.filter !== filter) {
+      this.setState({filter});
     }
   },
 
 
-  maybeNotify(minLength, filter) {
-    const {filter: oldFilter} = this.state;
-
-    if (filter === oldFilter) {
-      return;
-    }
-
-    if (filter.length >= minLength) {
-      this.notify(filter);
-      return;
-    }
-
-    // If user hits backspace and goes below minLength consider it cleaning the filter
-    if (filter.length < oldFilter.length) {
-      this.notify('');
-    }
-  },
+  shouldComponentUpdate,
 
 
-  onChange(event) {
-    this.setState({filter: event.target.value});
+  onChange(filter) {
+    const {onFilter, minLength} = this.props;
+
+    this.setState({filter}, () => filter.length >= minLength ? onFilter(filter) : onFilter(''));
   },
 
 
   render() {
+    const {onFilter, filter: f, minLength, debounceTimeout, ...props} = this.props;
+    const {filter: value} = this.state;
+
     return (
-      <input type="text" placeholder="Filter"
+      <DebounceInput placeholder="Filter"
         // Pass props through
-        {...this.props}
-        value={this.state.filter} onChange={this.onChange} />
+        {...props}
+        minLength={0}
+        debounceTimeout={debounceTimeout}
+        value={value}
+        onChange={this.onChange} />
     );
   }
 });
 
 
-export default ReactTextFilter;
+export default TextFilter;
