@@ -15,46 +15,23 @@ const TextFilter = React.createClass({
   getDefaultProps() {
     return {
       minLength: 2,
-      filter: '',
       debounceTimeout: 100
     };
-  },
-
-
-  getInitialState() {
-    return {filter: this.props.filter};
-  },
-
-
-  componentWillReceiveProps({filter}) {
-    if (this.props.filter !== filter) {
-      this.setState({filter});
-    }
   },
 
 
   shouldComponentUpdate,
 
 
-  onChange(filter) {
-    const {onFilter, minLength} = this.props;
-
-    this.setState({filter}, () => filter.length >= minLength ? onFilter(filter) : onFilter(''));
-  },
-
-
   render() {
-    const {onFilter, filter: f, minLength, debounceTimeout, ...props} = this.props;
-    const {filter: value} = this.state;
+    const {onFilter, filter, ...props} = this.props;
 
     return (
       <DebounceInput placeholder="Filter"
         // Pass props through
         {...props}
-        minLength={0}
-        debounceTimeout={debounceTimeout}
-        value={value}
-        onChange={this.onChange} />
+        value={filter}
+        onChange={onFilter} />
     );
   }
 });
