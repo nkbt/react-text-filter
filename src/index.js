@@ -1,4 +1,4 @@
-import ReactTextFilter from './ReactTextFilter';
+import TextFilter from './TextFilter';
 
 
-export default ReactTextFilter;
+export default TextFilter;
