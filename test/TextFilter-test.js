@@ -1,15 +1,22 @@
+import React from 'react';
+
+
 describe('TextFilter', () => {
   const TextFilterInjector = require('inject!../src/TextFilter');
-  let debounce, TextFilter;
+  let DebounceInput, TextFilter;
 
 
   beforeEach(() => {
-    debounce = jasmine.createSpy('debounce');
+    DebounceInput = React.createClass({
+      render() {
+        return <div>Test</div>;
+      }
+    });
   });
 
 
   beforeEach(() => TextFilter = TextFilterInjector({
-    'lodash.debounce': debounce
+    'react-debounce-input': DebounceInput
   }));
 
 
