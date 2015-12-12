@@ -1,4 +1,6 @@
-import TextFilter from './TextFilter';
+'use strict';
 
+// Babel6 does not hack the default behaviour of ES Modules anymore, so we should export
+const TextFilter = require('./TextFilter').default;
 
-export default TextFilter;
+module.exports = TextFilter;

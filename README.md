@@ -22,20 +22,50 @@ React component that renders filtering Input
 npm install --save react-text-filter
 ```
 
-### bower
 
-Coming soon
+### Bower:
+```sh
+bower install --save https://npmcdn.com/react-text-filter/build/react-text-filter.js
+```
+
+or in `bower.json`
+
+```json
+{
+  "dependencies": {
+    "react-text-filter": "https://npmcdn.com/react-text-filter/build/react-text-filter.js"
+  }
+}
+```
+
+then include as
+```html
+<script src="bower_components/react-text-filter/index.js"></script>
+```
+
+
+### 1998 Script Tag:
+```html
+<script src="https://npmcdn.com/react-text-filter/build/react-text-filter.js"></script>
+(Module exposed as `TextFilter`)
+```
 
 
 ## Demo
 
 [http://nkbt.github.io/react-text-filter/example](http://nkbt.github.io/react-text-filter/example)
 
+## Codepen demo
+
+```js
+// TODO
+```
+
 
 ## Usage
 ```js
-import React from 'react';
-const {PropTypes} = React;
+import React, {PropTypes} from 'react';
+import ReactDOM from 'react-dom';
 import TextFilter from 'react-text-filter';
 
 
@@ -92,24 +122,24 @@ const App = React.createClass({
 
     return (
       <div>
-        <TextFilter onFilter={filter => this.setState({filter})} />
+        <TextFilter onFilter={({target: {value: filter}}) => this.setState({filter})} />
         <List items={filteredFruits} />
       </div>
     );
   }
 });
 
-
-React.render(<App />, document.body);
+const appRoot = document.createElement('div');
+document.body.appendChild(appRoot);
+ReactDOM.render(<App />, appRoot);
 ```
-
 
 ## Options
 
 
 #### `onFilter`: PropTypes.func.isRequired
 
-Function called when filter is changed (debounced)
+Function called when filter is changed (debounced) with original event passed through
 
 
 #### `filter`: PropTypes.string (default: '')
@@ -122,22 +152,35 @@ Initial filter value
 Minimal length of text to start notify
 
 
-#### `debounceTimeout`: PropTypes.number (default: 100)
+#### `debounceTimeout`: PropTypes.number (default: 300)
 
 Notification debounce timeout in ms
 
 
 ## Development and testing
 
+To run example covering all `TextFilter` features, use `npm start`, which will compile `src/example/Example.js`
+
 ```bash
+git clone git@github.com:nkbt/react-text-filter.git
+cd react-text-filter
 npm install
 npm start
+
+# then
+open http://localhost:8080
 ```
 
-Then 
+## Tests
 
 ```bash
-open http://localhost:8080
+npm test
+
+# to run tests in watch mode for development
+npm run test:dev
+
+# to generate test coverage (./reports/coverage)
+npm run test:cov
 ```
 
 ## License

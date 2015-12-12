@@ -15,7 +15,7 @@ const TextFilter = React.createClass({
   getDefaultProps() {
     return {
       minLength: 2,
-      debounceTimeout: 100
+      debounceTimeout: 300
     };
   },
 
