@@ -54,7 +54,7 @@
     "react": "^0.14"
   },
   "dependencies": {
-    "react-debounce-input": "^1.0.2"
+    "react-debounce-input": "^2.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",

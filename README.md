@@ -122,7 +122,7 @@ const App = React.createClass({
 
     return (
       <div>
-        <TextFilter onFilter={filter => this.setState({filter})} />
+        <TextFilter onFilter={({target: {value: filter}}) => this.setState({filter})} />
         <List items={filteredFruits} />
       </div>
     );
@@ -139,7 +139,7 @@ ReactDOM.render(<App />, appRoot);
 
 #### `onFilter`: PropTypes.func.isRequired
 
-Function called when filter is changed (debounced)
+Function called when filter is changed (debounced) with original event passed through
 
 
 #### `filter`: PropTypes.string (default: '')
@@ -152,7 +152,7 @@ Initial filter value
 Minimal length of text to start notify
 
 
-#### `debounceTimeout`: PropTypes.number (default: 100)
+#### `debounceTimeout`: PropTypes.number (default: 300)
 
 Notification debounce timeout in ms
 
