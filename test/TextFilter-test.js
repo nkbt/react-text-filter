@@ -1,26 +1,7 @@
-import React from 'react';
+import test from 'tape';
+import TextFilter from '../src/TextFilter';
 
-
-describe('TextFilter', () => {
-  const TextFilterInjector = require('inject!../src/TextFilter');
-  let DebounceInput, TextFilter;
-
-
-  beforeEach(() => {
-    DebounceInput = React.createClass({
-      render() {
-        return <div>Test</div>;
-      }
-    });
-  });
-
-
-  beforeEach(() => TextFilter = TextFilterInjector({
-    'react-debounce-input': DebounceInput
-  }));
-
-
-  it('should be ok', () => {
-    expect(TextFilter).toBeTruthy();
-  });
+test('TextFilter', t => {
+  t.ok(TextFilter instanceof Function, 'should be function');
+  t.end();
 });

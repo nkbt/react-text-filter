@@ -1,9 +1,12 @@
-'use strict';
+"use strict";
 
 
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+process.env.NODE_ENV = 'production';
+
+
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 
 module.exports = {
@@ -14,7 +17,7 @@ module.exports = {
     new HtmlWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
     })
   ],

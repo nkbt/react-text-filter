@@ -1,23 +1,26 @@
-'use strict';
+"use strict";
 
 
-var webpack = require('webpack');
-var path = require('path');
+process.env.NODE_ENV = 'production';
+
+
+const webpack = require('webpack');
+const path = require('path');
 
 
 module.exports = {
   devtool: 'source-map',
   entry: './src/index.js',
   output: {
-    filename: require('./package.json').name + '.js',
+    filename: `${require('./package.json').name}.js`,
     path: path.resolve('build'),
-    library: 'Component',
+    library: 'TextFilter',
     libraryTarget: 'umd'
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
     })
   ],

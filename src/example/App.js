@@ -1,5 +1,5 @@
 import React from 'react';
-import TextFilter from '..';
+import TextFilter from '../TextFilter';
 import List from './List';
 
 
@@ -44,6 +44,8 @@ const App = React.createClass({
 
     return (
       <div>
+        <h1>TextFilter</h1>
+
         <div>
           <h2>Customize</h2>
           minLength:&nbsp;
