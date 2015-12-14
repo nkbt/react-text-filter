@@ -154,6 +154,23 @@ Minimal length of text to start notify
 Notification debounce timeout in ms
 
 
+#### Arbitrary props will be transferred to the rendered `<input>`
+
+```js
+<TextFilter
+  onFilter={({target: {value: filter}}) => this.setState({filter})}
+  placeholder="Filter"
+  className="my-filter" />
+```
+
+Will result in
+
+```js
+<input type="text"
+  placeholder="Filter"
+  className="my-filter" />
+```
+
 ## Development and testing
 
 To run example covering all `TextFilter` features, use `npm start`, which will compile `src/example/Example.js`
