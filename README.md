@@ -57,10 +57,7 @@ then include as
 
 ## Codepen demo
 
-```js
-// TODO
-```
-
+[http://codepen.io/nkbt/pen/gPaZvQ](http://codepen.io/nkbt/pen/gPaZvQ?editors=001)
 
 ## Usage
 ```js
