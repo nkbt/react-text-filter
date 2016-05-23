@@ -1,6 +1,16 @@
 import React from 'react';
-import TextFilter from '../TextFilter';
-import List from './List';
+import TextFilter from '../..';
+
+const Item = ({item}) => <li>{item}</li>;
+Item.propTypes = {
+  item: React.PropTypes.string.isRequired
+};
+
+
+const List = ({items}) => <ul>{items.map(item => <Item key={item} item={item} />)}</ul>;
+List.propTypes = {
+  items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+};
 
 
 const fruits = [

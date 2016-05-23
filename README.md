@@ -1,11 +1,12 @@
-# react-text-filter
+# react-text-filter [![npm](https://img.shields.io/npm/v/react-text-filter.svg?style=flat-square)](https://www.npmjs.com/package/react-text-filter)
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nkbt/help)
+[![Gitter](https://img.shields.io/gitter/room/nkbt/help.svg?style=flat-square)](https://gitter.im/nkbt/help)
 
-[![Circle CI](https://circleci.com/gh/nkbt/react-text-filter.svg?style=svg)](https://circleci.com/gh/nkbt/react-text-filter)
-[![Coverage Status](https://coveralls.io/repos/github/nkbt/react-text-filter/badge.svg?branch=master)](https://coveralls.io/github/nkbt/react-text-filter?branch=master)
-[![Dependency Status](https://david-dm.org/nkbt/react-text-filter.svg)](https://david-dm.org/nkbt/react-text-filter)
-[![devDependency Status](https://david-dm.org/nkbt/react-text-filter/dev-status.svg)](https://david-dm.org/nkbt/react-text-filter#info=devDependencies)
+[![CircleCI](https://img.shields.io/circleci/project/nkbt/react-text-filter.svg?style=flat-square&label=nix-build)](https://circleci.com/gh/nkbt/react-text-filter)
+[![AppVeyor](https://img.shields.io/appveyor/ci/nkbt/react-text-filter.svg?style=flat-square&label=win-build)](https://ci.appveyor.com/project/nkbt/react-text-filter)
+[![Coverage](https://img.shields.io/codecov/c/github/nkbt/react-text-filter.svg?style=flat-square)](https://codecov.io/github/nkbt/react-text-filter?branch=master)
+[![Dependencies](https://img.shields.io/david/nkbt/react-text-filter.svg?style=flat-square)](https://david-dm.org/nkbt/react-text-filter)
+[![Dev Dependencies](https://img.shields.io/david/dev/nkbt/react-text-filter.svg?style=flat-square)](https://david-dm.org/nkbt/react-text-filter#info=devDependencies)
 
 React component that renders filtering Input
 
@@ -16,36 +17,23 @@ React component that renders filtering Input
 
 ## Installation
 
-### npm
-
+### NPM
 ```sh
-npm install --save react-text-filter
+npm install --save react react-text-filter
 ```
+
+Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 
 
 ### Bower:
 ```sh
-bower install --save https://npmcdn.com/react-text-filter/build/react-text-filter.js
-```
-
-or in `bower.json`
-
-```json
-{
-  "dependencies": {
-    "react-text-filter": "https://npmcdn.com/react-text-filter/build/react-text-filter.js"
-  }
-}
-```
-
-then include as
-```html
-<script src="bower_components/react-text-filter/index.js"></script>
+bower install --save https://npmcdn.com/react-text-filter/bower.zip
 ```
 
 
 ### 1998 Script Tag:
 ```html
+<script src="https://npmcdn.com/react/dist/react.js"></script>
 <script src="https://npmcdn.com/react-text-filter/build/react-text-filter.js"></script>
 (Module exposed as `TextFilter`)
 ```
@@ -53,7 +41,7 @@ then include as
 
 ## Demo
 
-[http://nkbt.github.io/react-text-filter/example](http://nkbt.github.io/react-text-filter/example)
+[http://nkbt.github.io/react-text-filter](http://nkbt.github.io/react-text-filter)
 
 ## Codepen demo
 
@@ -173,13 +161,15 @@ Will result in
 
 ## Development and testing
 
-To run example covering all `TextFilter` features, use `npm start`, which will compile `src/example/Example.js`
+Currently is being developed and tested with the latest stable `Node 5` on `OSX` and `Windows`.
+
+To run example covering all `TextFilter` features, use `npm start dev`, which will compile `src/example/Example.js`
 
 ```bash
 git clone git@github.com:nkbt/react-text-filter.git
 cd react-text-filter
 npm install
-npm start
+npm start dev
 
 # then
 open http://localhost:8080
@@ -188,13 +178,14 @@ open http://localhost:8080
 ## Tests
 
 ```bash
-npm test
-
-# to run tests in watch mode for development
-npm run test:dev
+# to run tests
+npm start test
 
 # to generate test coverage (./reports/coverage)
-npm run test:cov
+npm start test.cov
+
+# to run end-to-end tests
+npm start test.e2e
 ```
 
 ## License

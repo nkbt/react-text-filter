@@ -3,7 +3,7 @@ import DebounceInput from 'react-debounce-input';
 import {shouldComponentUpdate} from 'react/lib/ReactComponentWithPureRenderMixin';
 
 
-const TextFilter = React.createClass({
+export const TextFilter = React.createClass({
   propTypes: {
     onFilter: React.PropTypes.func.isRequired,
     filter: React.PropTypes.string,
@@ -30,8 +30,8 @@ const TextFilter = React.createClass({
       <DebounceInput placeholder="Filter"
         // Pass props through
         {...props}
-        value={filter}
-        onChange={onFilter} />
+        onChange={onFilter}
+        value={filter} />
     );
   }
 });
