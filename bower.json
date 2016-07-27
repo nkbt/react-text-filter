@@ -15,7 +15,10 @@
   "keywords": [
     "component",
     "react-component",
-    "react"
+    "react",
+    "react-text-filter",
+    "filter",
+    "text-filter"
   ],
   "authors": [
     "Nik Butenko <nik@butenko.me>"
