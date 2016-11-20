@@ -51,7 +51,7 @@ bower install --save https://unpkg.com/react-text-filter/bower.zip
 ```js
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
-import TextFilter from 'react-text-filter';
+import {TextFilter} from 'react-text-filter';
 
 
 const Item = React.createClass({
