@@ -161,7 +161,7 @@ Will result in
 
 ## Development and testing
 
-Currently is being developed and tested with the latest stable `Node 5` on `OSX` and `Windows`.
+Currently is being developed and tested with the latest stable `Node 6` on `OSX` and `Windows`.
 
 To run example covering all `TextFilter` features, use `npm start dev`, which will compile `src/example/Example.js`
 
