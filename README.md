@@ -51,7 +51,7 @@ bower install --save https://unpkg.com/react-text-filter/bower.zip
 ```js
 import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
-import TextFilter from 'react-text-filter';
+import {TextFilter} from 'react-text-filter';
 
 
 const Item = React.createClass({
@@ -161,7 +161,7 @@ Will result in
 
 ## Development and testing
 
-Currently is being developed and tested with the latest stable `Node 5` on `OSX` and `Windows`.
+Currently is being developed and tested with the latest stable `Node 6` on `OSX` and `Windows`.
 
 To run example covering all `TextFilter` features, use `npm start dev`, which will compile `src/example/Example.js`
 

@@ -9,6 +9,7 @@
   "scripts": {
     "start": "react-component-template",
     "test": "npm start test",
+    "template": "cf-react-component-template",
     "precommit": "npm start precommit",
     "prepush": "npm start prepush",
     "postversion": "npm start postversion",
@@ -39,6 +40,7 @@
     "react-debounce-input": "^2"
   },
   "devDependencies": {
-    "react-component-template": "0.1.5"
+    "react-component-template": "0.1.9",
+    "cf-react-component-template": "0.1.8"
   }
 }

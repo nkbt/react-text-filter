@@ -3,7 +3,7 @@ import Customizable from './Customizable';
 import css from './App.css';
 
 
-const App = () => (
+const App = () =>
   <div className={css.app}>
     <div>
       <h1>react-text-filter</h1>
@@ -13,8 +13,7 @@ const App = () => (
       </section>
 
     </div>
-  </div>
-);
+  </div>;
 
 
 export default App;
