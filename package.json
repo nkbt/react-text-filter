@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/nkbt/react-text-filter",
   "peerDependencies": {
-    "react": "^0.13 || ^0.14 || ^15"
+    "react": "^15.4.2"
   },
   "dependencies": {
     "react-debounce-input": "^2"
