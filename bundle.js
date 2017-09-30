@@ -33,9 +33,6 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -63,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -74,78 +71,79 @@ module.exports = React;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__App__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_css__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__app_css__);
+/* global document */
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.App = undefined;
 
-var _react = __webpack_require__(0);
 
-var _react2 = _interopRequireDefault(_react);
 
-var _Customizable = __webpack_require__(4);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var appRoot = document.createElement('div');
 
-var App = exports.App = function App() {
-  return _react2.default.createElement(
+appRoot.id = 'app';
+document.body.appendChild(appRoot);
+__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__App__["a" /* App */], null), appRoot);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = ReactDOM;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return App; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Customizable__ = __webpack_require__(4);
+
+
+
+var App = function App() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: 'app' },
-    _react2.default.createElement(
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       null,
-      _react2.default.createElement(
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'h1',
         null,
         'react-text-filter'
       ),
-      _react2.default.createElement(
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'section',
         { className: 'section' },
-        _react2.default.createElement(_Customizable.Customizable, null)
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Customizable__["a" /* Customizable */], null)
       )
     )
   );
 };
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = ReactDOM;
-
-/***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Customizable = undefined;
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Customizable; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_Component__ = __webpack_require__(5);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Component = __webpack_require__(6);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -153,9 +151,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+
+
+
+
 var Item = function Item(_ref) {
   var item = _ref.item;
-  return _react2.default.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'li',
     null,
     item
@@ -164,11 +166,11 @@ var Item = function Item(_ref) {
 
 var List = function List(_ref2) {
   var items = _ref2.items;
-  return _react2.default.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'ul',
     null,
     items.map(function (item) {
-      return _react2.default.createElement(Item, { key: item, item: item });
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Item, { key: item, item: item });
     })
   );
 };
@@ -181,7 +183,7 @@ var fruitFilter = function fruitFilter(filter) {
   };
 };
 
-var Customizable = exports.Customizable = function (_React$PureComponent) {
+var Customizable = function (_React$PureComponent) {
   _inherits(Customizable, _React$PureComponent);
 
   function Customizable() {
@@ -226,21 +228,21 @@ var Customizable = exports.Customizable = function (_React$PureComponent) {
 
       var filteredFruits = filter ? fruits.filter(fruitFilter(filter)) : fruits.slice(0);
 
-      return _react2.default.createElement(
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         null,
-        _react2.default.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h2',
           null,
           'Customizable'
         ),
-        _react2.default.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'label',
           { htmlFor: 'minLength' },
           'Min length [',
           minLength,
           ']:\xA0',
-          _react2.default.createElement('input', {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
             id: 'minLength',
             type: 'range',
             step: 1,
@@ -251,13 +253,13 @@ var Customizable = exports.Customizable = function (_React$PureComponent) {
           '\xA0'
         ),
         '\xA0',
-        _react2.default.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'label',
           { htmlFor: 'timeout' },
           'Debounce timeout [',
           debounceTimeout,
           'ms]:\xA0',
-          _react2.default.createElement('input', {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
             id: 'timeout',
             disabled: indefinite,
             type: 'range',
@@ -269,78 +271,37 @@ var Customizable = exports.Customizable = function (_React$PureComponent) {
           '\xA0'
         ),
         '\xA0',
-        _react2.default.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h3',
           null,
           'Test'
         ),
-        _react2.default.createElement(_Component.TextFilter, {
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__src_Component__["a" /* TextFilter */], {
           filter: filter,
           minLength: minLength,
           debounceTimeout: debounceTimeout,
           onFilter: this.onFilter }),
-        _react2.default.createElement(List, { items: filteredFruits })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(List, { items: filteredFruits })
       );
     }
   }]);
 
   return Customizable;
-}(_react2.default.PureComponent);
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.PureComponent);
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(3);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _App = __webpack_require__(1);
-
-__webpack_require__(2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* global document */
-
-var appRoot = document.createElement('div');
-
-appRoot.id = 'app';
-document.body.appendChild(appRoot);
-_reactDom2.default.render(_react2.default.createElement(_App.App, null), appRoot);
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.TextFilter = undefined;
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TextFilter; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_debounce_input__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_debounce_input___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_debounce_input__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDebounceInput = __webpack_require__(10);
-
-var _reactDebounceInput2 = _interopRequireDefault(_reactDebounceInput);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -350,7 +311,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var TextFilter = exports.TextFilter = function (_React$PureComponent) {
+
+
+
+
+var TextFilter = function (_React$PureComponent) {
   _inherits(TextFilter, _React$PureComponent);
 
   function TextFilter() {
@@ -367,7 +332,7 @@ var TextFilter = exports.TextFilter = function (_React$PureComponent) {
           filter = _props.filter,
           rest = _objectWithoutProperties(_props, ['onFilter', 'filter']);
 
-      return _react2.default.createElement(_reactDebounceInput2.default, _extends({
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_debounce_input___default.a, _extends({
         placeholder: 'Filter'
         // Pass props through
       }, rest, {
@@ -377,8 +342,7 @@ var TextFilter = exports.TextFilter = function (_React$PureComponent) {
   }]);
 
   return TextFilter;
-}(_react2.default.PureComponent);
-
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.PureComponent);
 TextFilter.defaultProps = {
   filter: undefined,
   minLength: 2,
@@ -386,31 +350,245 @@ TextFilter.defaultProps = {
 };
 
 /***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _require = __webpack_require__(7),
+    DebounceInput = _require.DebounceInput;
+
+module.exports = DebounceInput;
+
+/***/ }),
 /* 7 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-var g;
+"use strict";
 
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
 
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DebounceInput = undefined;
 
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-module.exports = g;
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _lodash = __webpack_require__(8);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DebounceInput = exports.DebounceInput = function (_React$PureComponent) {
+  _inherits(DebounceInput, _React$PureComponent);
+
+  function DebounceInput(props) {
+    _classCallCheck(this, DebounceInput);
+
+    var _this = _possibleConstructorReturn(this, (DebounceInput.__proto__ || Object.getPrototypeOf(DebounceInput)).call(this, props));
+
+    _this.createNotifier = function (debounceTimeout) {
+      if (debounceTimeout < 0) {
+        _this.notify = function () {
+          return null;
+        };
+      } else if (debounceTimeout === 0) {
+        _this.notify = _this.doNotify;
+      } else {
+        var debouncedChangeFunc = (0, _lodash2.default)(function (event) {
+          _this.isDebouncing = false;
+          _this.doNotify(event);
+        }, debounceTimeout);
+
+        _this.notify = function (event) {
+          _this.isDebouncing = true;
+          debouncedChangeFunc(event);
+        };
+
+        _this.flush = function () {
+          debouncedChangeFunc.flush();
+        };
+
+        _this.cancel = function () {
+          _this.isDebouncing = false;
+          debouncedChangeFunc.cancel();
+        };
+      }
+    };
+
+    _this.doNotify = function () {
+      var onChange = _this.props.onChange;
+
+
+      onChange.apply(undefined, arguments);
+    };
+
+    _this.forceNotify = function (event) {
+      if (!_this.isDebouncing) {
+        return;
+      }
+
+      if (_this.cancel) {
+        _this.cancel();
+      }
+
+      var value = _this.state.value;
+      var minLength = _this.props.minLength;
+
+
+      if (value.length >= minLength) {
+        _this.doNotify(event);
+      } else {
+        _this.doNotify(_extends({}, event, { target: _extends({}, event.target, { value: value }) }));
+      }
+    };
+
+    _this.onChange = function (event) {
+      event.persist();
+
+      var oldValue = _this.state.value;
+
+      _this.setState({ value: event.target.value }, function () {
+        var value = _this.state.value;
+
+
+        if (value.length >= _this.props.minLength) {
+          _this.notify(event);
+          return;
+        }
+
+        // If user hits backspace and goes below minLength consider it cleaning the value
+        if (oldValue.length > value.length) {
+          _this.notify(_extends({}, event, { target: _extends({}, event.target, { value: '' }) }));
+        }
+      });
+    };
+
+    _this.state = {
+      value: props.value || ''
+    };
+
+    _this.isDebouncing = false;
+    return _this;
+  }
+
+  _createClass(DebounceInput, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.createNotifier(this.props.debounceTimeout);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(_ref) {
+      var value = _ref.value,
+          debounceTimeout = _ref.debounceTimeout;
+
+      if (this.isDebouncing) {
+        return;
+      }
+      if (typeof value !== 'undefined' && this.state.value !== value) {
+        this.setState({ value: value });
+      }
+      if (debounceTimeout !== this.props.debounceTimeout) {
+        this.createNotifier(debounceTimeout);
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.flush) {
+        this.flush();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          element = _props.element,
+          _onChange = _props.onChange,
+          _value = _props.value,
+          _minLength = _props.minLength,
+          _debounceTimeout = _props.debounceTimeout,
+          forceNotifyByEnter = _props.forceNotifyByEnter,
+          forceNotifyOnBlur = _props.forceNotifyOnBlur,
+          _onKeyDown = _props.onKeyDown,
+          _onBlur = _props.onBlur,
+          props = _objectWithoutProperties(_props, ['element', 'onChange', 'value', 'minLength', 'debounceTimeout', 'forceNotifyByEnter', 'forceNotifyOnBlur', 'onKeyDown', 'onBlur']);
+
+      var maybeOnKeyDown = void 0;
+
+      if (forceNotifyByEnter) {
+        maybeOnKeyDown = {
+          onKeyDown: function onKeyDown(event) {
+            if (event.key === 'Enter') {
+              _this2.forceNotify(event);
+            }
+            // Invoke original onKeyDown if present
+            if (_onKeyDown) {
+              _onKeyDown(event);
+            }
+          }
+        };
+      } else if (_onKeyDown) {
+        maybeOnKeyDown = { onKeyDown: _onKeyDown };
+      } else {
+        maybeOnKeyDown = {};
+      }
+
+      var maybeOnBlur = void 0;
+
+      if (forceNotifyOnBlur) {
+        maybeOnBlur = {
+          onBlur: function onBlur(event) {
+            _this2.forceNotify(event);
+            // Invoke original onBlur if present
+            if (_onBlur) {
+              _onBlur(event);
+            }
+          }
+        };
+      } else if (_onBlur) {
+        maybeOnBlur = { onBlur: _onBlur };
+      } else {
+        maybeOnBlur = {};
+      }
+
+      return _react2.default.createElement(element, _extends({}, props, {
+        onChange: this.onChange,
+        value: this.state.value
+      }, maybeOnKeyDown, maybeOnBlur));
+    }
+  }]);
+
+  return DebounceInput;
+}(_react2.default.PureComponent);
+
+DebounceInput.defaultProps = {
+  element: 'input',
+  type: 'text',
+  minLength: 0,
+  debounceTimeout: 100,
+  forceNotifyByEnter: true,
+  forceNotifyOnBlur: true
+};
 
 /***/ }),
 /* 8 */
@@ -794,224 +972,40 @@ function toNumber(value) {
 
 module.exports = debounce;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
+var g;
 
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DebounceInput = undefined;
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+module.exports = g;
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _lodash = __webpack_require__(8);
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var DebounceInput = exports.DebounceInput = function (_React$PureComponent) {
-  _inherits(DebounceInput, _React$PureComponent);
-
-  function DebounceInput(props) {
-    _classCallCheck(this, DebounceInput);
-
-    var _this = _possibleConstructorReturn(this, (DebounceInput.__proto__ || Object.getPrototypeOf(DebounceInput)).call(this, props));
-
-    _this.createNotifier = function (debounceTimeout) {
-      if (debounceTimeout < 0) {
-        _this.notify = function () {
-          return null;
-        };
-      } else if (debounceTimeout === 0) {
-        _this.notify = _this.doNotify;
-      } else {
-        var debouncedChangeFunc = (0, _lodash2.default)(function (event) {
-          _this.isDebouncing = false;
-          _this.doNotify(event);
-        }, debounceTimeout);
-
-        _this.notify = function (event) {
-          _this.isDebouncing = true;
-          debouncedChangeFunc(event);
-        };
-      }
-    };
-
-    _this.doNotify = function () {
-      var onChange = _this.props.onChange;
-
-
-      onChange.apply(undefined, arguments);
-    };
-
-    _this.forceNotify = function (event) {
-      if (!_this.isDebouncing) {
-        return;
-      }
-
-      if (_this.notify.cancel) {
-        _this.notify.cancel();
-        _this.isDebouncing = false;
-      }
-
-      var value = _this.state.value;
-      var minLength = _this.props.minLength;
-
-
-      if (value.length >= minLength) {
-        _this.doNotify(event);
-      } else {
-        _this.doNotify(_extends({}, event, { target: _extends({}, event.target, { value: value }) }));
-      }
-    };
-
-    _this.onChange = function (event) {
-      event.persist();
-
-      var oldValue = _this.state.value;
-
-      _this.setState({ value: event.target.value }, function () {
-        var value = _this.state.value;
-
-
-        if (value.length >= _this.props.minLength) {
-          _this.notify(event);
-          return;
-        }
-
-        // If user hits backspace and goes below minLength consider it cleaning the value
-        if (oldValue.length > value.length) {
-          _this.notify(_extends({}, event, { target: _extends({}, event.target, { value: '' }) }));
-        }
-      });
-    };
-
-    _this.state = {
-      value: props.value || ''
-    };
-
-    _this.isDebouncing = false;
-    return _this;
-  }
-
-  _createClass(DebounceInput, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this.createNotifier(this.props.debounceTimeout);
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(_ref) {
-      var value = _ref.value,
-          debounceTimeout = _ref.debounceTimeout;
-
-      if (this.isDebouncing) {
-        return;
-      }
-      if (typeof value !== 'undefined' && this.state.value !== value) {
-        this.setState({ value: value });
-      }
-      if (debounceTimeout !== this.props.debounceTimeout) {
-        this.createNotifier(debounceTimeout);
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      if (this.notify.flush) {
-        this.notify.flush();
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var _props = this.props,
-          element = _props.element,
-          _onChange = _props.onChange,
-          _value = _props.value,
-          _minLength = _props.minLength,
-          _debounceTimeout = _props.debounceTimeout,
-          forceNotifyByEnter = _props.forceNotifyByEnter,
-          forceNotifyOnBlur = _props.forceNotifyOnBlur,
-          _onKeyDown = _props.onKeyDown,
-          _onBlur = _props.onBlur,
-          props = _objectWithoutProperties(_props, ['element', 'onChange', 'value', 'minLength', 'debounceTimeout', 'forceNotifyByEnter', 'forceNotifyOnBlur', 'onKeyDown', 'onBlur']);
-
-      var maybeOnKeyDown = forceNotifyByEnter ? {
-        onKeyDown: function onKeyDown(event) {
-          if (event.key === 'Enter') {
-            _this2.forceNotify(event);
-          }
-          // Invoke original onKeyDown if present
-          if (_onKeyDown) {
-            _onKeyDown(event);
-          }
-        }
-      } : {};
-
-      var maybeOnBlur = forceNotifyOnBlur ? {
-        onBlur: function onBlur(event) {
-          _this2.forceNotify(event);
-          // Invoke original onBlur if present
-          if (_onBlur) {
-            _onBlur(event);
-          }
-        }
-      } : {};
-
-      return _react2.default.createElement(element, _extends({}, props, {
-        onChange: this.onChange,
-        value: this.state.value
-      }, maybeOnKeyDown, maybeOnBlur));
-    }
-  }]);
-
-  return DebounceInput;
-}(_react2.default.PureComponent);
-
-DebounceInput.defaultProps = {
-  element: 'input',
-  type: 'text',
-  minLength: 0,
-  debounceTimeout: 100,
-  forceNotifyByEnter: true,
-  forceNotifyOnBlur: true
-};
 
 /***/ }),
 /* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-var _require = __webpack_require__(9),
-    DebounceInput = _require.DebounceInput;
-
-module.exports = DebounceInput;
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
